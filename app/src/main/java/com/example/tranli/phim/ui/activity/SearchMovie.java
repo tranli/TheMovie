@@ -45,6 +45,10 @@ private Button btnSearch;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_movie);
+        recyclerView = findViewById(R.id.rv_search_movie);
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(SearchMovie.this);
+        recyclerView.setLayoutManager(layoutManager);
 
         edtSearch = findViewById(R.id.edt_search_movie);
         btnSearch = findViewById(R.id.btn_search);
@@ -59,10 +63,7 @@ private Button btnSearch;
                     @Override
                     public void onResponse(Call<MoviePageResult> call, Response<MoviePageResult> response) {
 
-                        recyclerView = findViewById(R.id.rv_search_movie);
-                        recyclerView.setHasFixedSize(true);
-                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(SearchMovie.this);
-                        recyclerView.setLayoutManager(layoutManager);
+
 
                          ArrayList<Movie> movies = response.body().getMovieResult();
 //                         ResultsMovies.addAll(movies);

@@ -83,6 +83,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.sort_by_top:
                 currentSortMode = 2;
                 break;
+            case R.id.search:
+                Intent intent = new Intent(MainActivity.this, SearchMovie.class);
+                startActivity(intent);
+                break;
+
         }
         loadPage(1);
         return super.onOptionsItemSelected(item);

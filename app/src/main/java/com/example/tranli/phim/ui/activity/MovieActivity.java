@@ -34,6 +34,8 @@ public class MovieActivity extends AppCompatActivity {
     @BindView(R.id.movie_activity_release_date) TextView mMovieReleaseDate;
     @BindView(R.id.movie_activity_rating) TextView mMovieRating;
 
+    //Just comment something
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

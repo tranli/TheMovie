@@ -22,6 +22,7 @@ public class SearchMovieAdapter extends RecyclerView.Adapter<SearchMovieAdapter.
     private Context mContext;
     public ArrayList<Movie> mMovies;
 
+    //hello kitty
     public SearchMovieAdapter(ArrayList<Movie> movies, Context mContext) {
         this.mMovies = movies;
         this.mContext = mContext;
